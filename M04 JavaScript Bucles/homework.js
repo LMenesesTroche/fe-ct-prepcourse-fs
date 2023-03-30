@@ -147,8 +147,8 @@ function operadoresLogicos(num1, num2, num3) {
    }else if(num1<0 || num2<0 || num3<0){
       return ("Hay negativos");
    }else if (num3>num1 && num3 > num2){
-      num2 +1 ;
-      return num2;
+      var lol = num3 +1 ;
+      return lol;
      
    }else if (num1 ==0&&num2 ==0&&num3 ==0){
       return("Error");
@@ -162,27 +162,50 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   if (num % num !== 0 && num % 1 !== 0 && num === 0 && num === 1){
-      return(false);
-   }else return (true);
+   
+      // Si el número es menor o igual a 1, no es primo
+      if (num <= 1) {
+        return false;
+      }
+    
+      // Verificar si el número es divisible por algún número entre 2 y su mitad
+      for (let i = 2; i <= Math.floor(num / 2); i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+    
+      // Si no se encontró ningún número por el cual el número es divisible, es primo
+      return true;
+    
+    
 }
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
-   if ( valor  =true ){
+   if ( valor  ===  true ){
       return("Soy verdadero");
-   }else return("Soy falso");
+   }else if  (valor === false) return("Soy falso");
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
-   if (num> 99){
-      return true;
-   }else return false;
+   
+      // Convertir el número a una cadena y contar la longitud de la cadena
+      const longitud = num.toString().length;
+    
+      // Verificar si la longitud es igual a 3
+      if (longitud === 3) {
+        return true;
+      } else {
+        return false;
+      }
+    
+    
 }
 
 function doWhile(num) {
@@ -190,10 +213,14 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   while (valor< 8){
-      valor = num +1;
-   }
-   return num; //------------------------------------------------------
+   
+   let veces = 0;
+  do {
+   num += 5;
+    veces++;
+  } while ( veces < 8);
+
+  return num;//------------------------------------------------------
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

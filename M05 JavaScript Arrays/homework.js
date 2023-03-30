@@ -57,11 +57,11 @@ function arrayContiene(array, elemento) {
    // Retornar true si está, o false si no está.
    // Tu código:
    
-   for (var i = 0;i<array.length;i++){
-      if(array[i]===elemento){
-         return true;
-      }else return false;
-   }
+   if (array.includes(elemento)) {
+      return true;
+    } else {
+      return false;
+    }
 }
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
@@ -136,8 +136,8 @@ function empiezaConNueve(num) {
    // Tu código:
   string=  num.toString ();
   separado = string.split(""); 
-  for (let i = 1; i < separado.length; i++) {
-    if (separado.pop() == "9") {
+  for (let i = 0; i < separado.length; i++) {
+    if (separado[0] === "9") {
        return true;
       } 
 
@@ -171,13 +171,17 @@ function mesesDelAño(array) {
    var lol = array.includes ("Marzo");
    var lol2 = array.includes ("Noviembre");
    var nuevoArray =[];
-   if (lo == true && lol == true && lol2== true){
-      
-      nuevoArray.push("Enero","Marzo","Noviembre");
-      return nuevoArray;
-   }else {
+
+   if (lo === true ){
+      nuevoArray.push("Enero");
+   }else if ( lol===true){
+      nuevoArray.push("Marzo");
+   }else if ( lol2===true){
+      nuevoArray.push("Noviembre");
+   } else if (lo ===false || lol === false || lol2 === false ){
       return ("No se encontraron los meses pedidos");
    }// ok 
+   return nuevoArray;
 
    
   
@@ -213,16 +217,19 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-   let arr = []
-   for(let i=1; i <= 10; i++){
+   let arr = [];
+   for(let i=0; i < 10; i++){
       if(i === num){
          break;
       }
-      num+=2
-      arr.push(num);
+      var lol = num+ 2;
+      arr.push(lol);
+      return arr;
+      
    }
+   
    return ("Se interrumpió la ejecución");
-   return arr//ok
+   
    
 }
 

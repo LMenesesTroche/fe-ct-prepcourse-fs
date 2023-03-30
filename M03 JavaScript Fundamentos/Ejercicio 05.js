@@ -12,6 +12,8 @@ function esPositivo(num) {
       return("Es positivo");
    } else if(num<0) {
       return("Es negativo");
+   }else if (num === 0){
+      return false;
    }
 }
 
@@ -69,17 +71,9 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-   if (letra === "A"){
+   if (letra === "a"||letra==="A"||letra==="E"||letra==="e"||letra==="I"||letra==="i"||letra==="O"||letra==="o"||letra==="U"||letra==="u"){
       return ("Es vocal");
-   }else if (letra === "E"){
-      return ("Es vocal");
-   }else if (letra === "I"){
-      return ("Es vocal");
-   }else if (letra ==="O"){
-      return ("Es vocal");
-   }else if (letra === "U"){
-      return ("Es vocal");
-   }else  {
+   }else {
       return ("Dato incorrecto");
    }
     
