@@ -167,24 +167,18 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   var lo = array.includes ("Enero");
-   var lol = array.includes ("Marzo");
-   var lol2 = array.includes ("Noviembre");
-   var nuevoArray =[];
-
-   if (lo === true ){
-      nuevoArray.push("Enero");
-   }else if ( lol===true){
-      nuevoArray.push("Marzo");
-   }else if ( lol2===true){
-      nuevoArray.push("Noviembre");
-   } else if (lo ===false || lol === false || lol2 === false ){
-      return ("No se encontraron los meses pedidos");
-   }// ok 
-   return nuevoArray;
-
+   var mesesOrdenados = [];
    
-  
+   for(var i = 0; i < array.length; i++){
+      if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
+         mesesOrdenados.push(array[i])
+      } 
+   }
+   if(mesesOrdenados.length === 3){
+      return mesesOrdenados;
+   } else {
+      return "No se encontraron los meses pedidos";
+      }
 }
 
 function tablaDelSeis() {
@@ -217,18 +211,22 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+  
    let arr = [];
-   for(let i=0; i < 10; i++){
-      if(i === num){
-         break;
-      }
-      var lol = num+ 2;
-      arr.push(lol);
-      return arr;
-      
+
+   for(let i = 1; i <= 10; i++) {
+     num += 2;
+     arr.push(num);
+ 
+     if (num === i) {
+       return "Se interrumpió la ejecución";
+     }
    }
+ 
+   return arr;
+    
+    
    
-   return ("Se interrumpió la ejecución");
    
    
 }

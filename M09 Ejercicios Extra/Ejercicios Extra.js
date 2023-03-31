@@ -78,8 +78,12 @@ function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
-   var mitad = numero.length /2;
-   
+   var  separada = numero.toString().split("");   
+   var volteada = separada.slice().reverse();
+
+   if (volteada.join("") === separada.join("")){
+      return ("Es capicua");
+   }else return("No es capicua");
 } 
 
 function deleteAbc(string) {
@@ -97,6 +101,7 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+
 }
 
 function buscoInterseccion(array1, array2) {
@@ -106,6 +111,7 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+   
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
