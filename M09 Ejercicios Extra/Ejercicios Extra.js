@@ -101,6 +101,8 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   let ordenado = arrayOfStrings.sort ((a,b)=>a.length -b.length );
+   return ordenado;
 
 }
 
@@ -111,7 +113,10 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
-   
+   var common = array1.filter(x => array2.indexOf(x) !== -1)
+   return common;
+
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
