@@ -1,0 +1,121 @@
+h1{
+    color:rgb(188, 49, 190);
+}
+.titulos{
+    color:blue;
+}
+p {
+    color: red;
+    font-size: 16px;
+    border: solid 1px green;
+}
+p{
+    font-size:16px;
+    padding:10%;
+    width:23em;
+}
+p{
+    color:red;
+    background-color:#FF0033;
+    border-color:rgb(255,0,0);
+}
+section{
+    padding:50px 30px;
+    margin-left:40px;
+}
+section article{
+    background-color:#cccccc;
+    width:500px;
+}
+section article h2{
+    height: 4em;
+}
+.rojo{
+    color:red;
+}
+.azul{
+    color:blue;
+}
+ul li{
+    color:rgb(239, 19, 19);
+}
+ol li{
+    color:green;
+}
+
+h1{
+    font-style:italic;
+    /*Inclinacion de las letras  */
+    font-weight:lighter ;
+    /*Grosor de las letras  */
+    font-size:30px;
+    /*Tamaño de las letras  */
+    text-align: center;
+    /*Alineacion de los titulos  */
+    
+}
+
+h2{
+    font-size:15px;
+    text-align: end;
+    /*Alineacion de los titulos  */
+    text-decoration:underline;
+    /*Subrayado(se puede hacer mas)  */
+
+}
+p{
+    line-height:2;
+    /*Separa verticalmente  */
+
+}
+ul{
+    list-style-type:circle;
+    /* icono que se usa en la lista */
+}
+html{
+    font-size:100%;
+        /* tamaño de letras  */
+}
+div{
+    background-color: rgb(224, 187, 225);
+        /* color de fondo */
+}
+div{
+    background-image:url(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/NNC7TA7K2NG5HM2REZSAE244XE.jpg) ;
+    /* imagen de fondo */
+        background-repeat: no-repeat;
+    /* repetido de fondo */
+    background-position: top center;
+    /* poscicion de fondo */
+    background-attachment: fixed;
+    /* efecto parallax */
+    background-size: 100% 100%;
+    /*tamaño del fondo*/
+}
+
+a:hover {
+    background-color:#deb8dc;
+    /*sombrita en los botones cuando pasa el mouse por ahi*/
+}
+a:active {
+    background-color:#FF0055;
+    /*color en los botones cuando los apreto*/
+}
+.grid-container{
+    display:grid;
+    column-gap: 10px;
+    /*columnas*/
+    row-gap:15px;
+    /*filas*/
+    /*controla los espacios entre cubitos*/
+}
+
+.grind-container{
+    display:grind;
+    grind-template-columns:40px 50px auto 50px 40px;
+    grind-templates-rows: 25% 100px;
+}
+
+
+
+
